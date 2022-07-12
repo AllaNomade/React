@@ -3,14 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "author": {
-  "name": "Alan",
-  "url": "https://github.com/AllaNomade",
-  "email": "allanpaiva17@gmail.com"
+    "name": "Alan",
+    "url": "https://github.com/AllaNomade",
+    "email": "allanpaiva17@gmail.com"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "styled-components": "^5.3.5"
+  },
+  "resolutions": {
+    "styled-components": "^5"
   },
   "scripts": {
     "start": "react-scripts start",
