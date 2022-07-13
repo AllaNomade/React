@@ -1,8 +1,7 @@
-const rewireStyledComponents = require('react-app-rewire-styled-components')
+// eslint-disable-next-line import/no-extraneous-dependencies
+const { useBabelRc, override } = require('customize-cra');
 
-module.exports = function override(config, env) {
-  config = rewireStyledComponents(config, env, {})
-
-  return config;
-}
+module.exports =  override(
+  useBabelRc()
+);
 

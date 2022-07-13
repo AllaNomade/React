@@ -7,3 +7,5 @@ export const Wrapper = styled.footer`
 export const CopyRights = styled.p`
   color: gray;
 `;
+
+export default Wrapper;
