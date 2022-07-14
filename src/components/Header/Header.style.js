@@ -1,7 +1,8 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.header`
-  background-color: royalblue;
-`;
+${({ theme }) => css`
+ background-color: ${theme.colors.gray.dark}
+`}
 
-export default Wrapper;
+`;

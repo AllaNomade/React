@@ -1,1 +1,2 @@
-export { default } from './Footer'
+// eslint-disable-next-line no-restricted-exports
+export { default } from './Footer';
