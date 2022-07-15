@@ -2,6 +2,6 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.header`
   ${({ theme }) => css`
-    background-color: ${theme.colors.gray.dark}
+    background-color: ${theme.colors.error.primary}
   `}
 `;

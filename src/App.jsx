@@ -1,17 +1,12 @@
 import { ThemeProvider } from 'styled-components';
-import Footer from './components/Footer';
-import Header from './components/Header';
+import Router from './components/Router/Router';
 import { GlobalStyle } from './styles';
 import defaultTheme from './themes/defaultTheme';
 
 const App = () => (
   <ThemeProvider theme={defaultTheme}>
     <GlobalStyle />
-    <div>
-      <Header />
-      <p>Hello World!</p>
-      <Footer />
-    </div>
+    <Router />
   </ThemeProvider>
 );
 
