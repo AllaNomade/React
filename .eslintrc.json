@@ -19,6 +19,7 @@
         "react"
     ],
     "rules": {
+      "react/prop-types": 0,
       "import/prefer-default-export": 0,
       "react/react-in-jsx-scope": "off",
       "import/no-named-as-default": 0,
