@@ -7,6 +7,8 @@ import {
   RegisterPage,
   UsersPage,
   ProfilePage,
+  TestPage,
+  DogPage,
 } from '../../pages';
 
 const Router = () => (
@@ -18,6 +20,8 @@ const Router = () => (
       <Route path="/profile/:userId" element={<ProfilePage />} />
       <Route path="/lobby" element={<LobbyPage />} />
       <Route path="/users" element={<UsersPage />} />
+      <Route path="/test" element={<TestPage />} />
+      <Route path="/dog" element={<DogPage />} />
       <Route path="*" element={<ErrorPage />} />
     </Routes>
   </BrowserRouter>

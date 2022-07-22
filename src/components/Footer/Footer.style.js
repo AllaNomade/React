@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.footer`
-  background-color: aliceblue;
+  background-color: whitesmoke;
 `;
 
 export const CopyRights = styled.p`

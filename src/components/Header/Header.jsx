@@ -1,8 +1,16 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { BsList } from 'react-icons/bs';
+import { DiGithubBadge } from 'react-icons/di';
 import * as Style from './Header.style';
 
 const Header = () => {
   const [showSideMenu, setShowSideMenu] = useState(false);
+  const navigate = useNavigate();
+
+  const handleOnClick = () => {
+    navigate('/');
+  };
 
   const toggleShowSide = () => {
     console.log(showSideMenu);
@@ -34,10 +42,20 @@ const Header = () => {
       </Style.Menu>
       <Style.SideMenu showSideMenu={showSideMenu}>
         <p>Exemplo</p>
+        <p>Exemplo</p>
+        <p>Exemplo</p>
+        <p>Exemplo</p>
+        <p>Exemplo</p>
+        <p>Exemplo</p>
+        <p>Exemplo</p>
+        <p>Exemplo</p>
+        <p>Exemplo</p>
+        <p>Exemplo</p>
+        <p>Exemplo</p>
       </Style.SideMenu>
-      <Style.ButtonMenu type="button" onClick={toggleShowSide}>menu</Style.ButtonMenu>
+      <Style.ButtonMenu type="button" onClick={toggleShowSide}><BsList /></Style.ButtonMenu>
       <Style.Title>TO DO</Style.Title>
-      <p>GitHub</p>
+      <Style.ButtonEvent type="button" onClick={handleOnClick}><DiGithubBadge /></Style.ButtonEvent>
     </Style.Wrapper>
   );
 };

@@ -21,7 +21,7 @@ const ProfilePage = () => {
       ) : (
         <>
           <h1>
-            {`Perfil de ${user.name}`}
+            {`Olá, ${user.name}!`}
           </h1>
           <ul>
             <li>

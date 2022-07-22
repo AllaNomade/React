@@ -1,21 +1,15 @@
-import { Link, useNavigate } from 'react-router-dom';
-import { Controller, useForm } from 'react-hook-form';
-import DefaultInput from '../components/DefaultInput';
+import { useForm, Controller } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 import { Header } from '../components';
+import DefaultInput from '../components/DefaultInput';
 
-const LoginPage = () => {
+const TestPage = () => {
   const { control, handleSubmit } = useForm({
     defaultValues: {
-      email: 'users@teste.com',
-      password: '0000',
+      email: 'farkas@teste.com',
+      password: '9999',
     },
   });
-
-  const navigate = useNavigate();
-
-  const handleOnClick = () => {
-    navigate('/users');
-  };
 
   const onSubmit = (data) => {
     console.log(data);
@@ -24,7 +18,7 @@ const LoginPage = () => {
   return (
     <div>
       <Header />
-      <h1>Login</h1>
+      <h1>Test</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Controller
           name="email"
@@ -48,11 +42,12 @@ const LoginPage = () => {
             );
           }}
         />
-        <button type="submit" onClick={handleOnClick}>entrar</button>
+        <button type="submit">entrar</button>
       </form>
-      <Link to="/register">Não possui conta? Cadastre-se!</Link>
+      <Link to="/login">Já possui conta? Faça o Login!</Link>
     </div>
+
   );
 };
 
-export default LoginPage;
+export default TestPage;

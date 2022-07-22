@@ -11,6 +11,9 @@ const HomePage = () => (
     <div>
       <Link to="/register">Cadastre-se</Link>
     </div>
+    <div>
+      <Link to="/test">Saiba Mais</Link>
+    </div>
   </div>
 );
 

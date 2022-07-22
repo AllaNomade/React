@@ -5,3 +5,5 @@ export { default as RegisterPage } from './Register.page';
 export { default as LobbyPage } from './Lobby.page';
 export { default as UsersPage } from './Users.page';
 export { default as ProfilePage } from './Profile.page';
+export { default as TestPage } from './Test.page';
+export { default as DogPage } from './RandomDog.page';

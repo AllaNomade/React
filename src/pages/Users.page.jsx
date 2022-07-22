@@ -1,8 +1,13 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { fake } from '../devUtils';
 
 const UsersPage = () => {
   const { users } = fake;
+  const navigate = useNavigate();
+
+  const handleOnClick = () => {
+    navigate('/');
+  };
 
   const usersMap = users.map((user) => {
     const key = `key-${user.id}`;
@@ -18,11 +23,11 @@ const UsersPage = () => {
   return (
     <div>
       <h1>Users</h1>
-      <div>
-        <Link to="/lobby">Lobby</Link>
-      </div>
       <ul>
         {usersMap}
+        <div>
+          <button type="button" onClick={handleOnClick}>Voltar</button>
+        </div>
       </ul>
     </div>
   );
