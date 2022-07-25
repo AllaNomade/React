@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { Controller, useForm } from 'react-hook-form';
 import DefaultInput from '../components/DefaultInput';
-import { Header } from '../components';
+import { Header, RandomDog } from '../components';
 
 const LoginPage = () => {
   const { control, handleSubmit } = useForm({
@@ -51,6 +51,7 @@ const LoginPage = () => {
         <button type="submit" onClick={handleOnClick}>entrar</button>
       </form>
       <Link to="/register">Não possui conta? Cadastre-se!</Link>
+      <RandomDog />
     </div>
   );
 };

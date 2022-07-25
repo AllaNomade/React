@@ -61,7 +61,7 @@ export const SideMenu = styled.div`
   right: 50%;
   top: 58px;
   transform: translateX(-300%);
-  transition: transform 400ms ease-in-out;
+  transition: transform 800ms ease-in-out;
 
   ${showSideMenu && css`
     transform: translateX(0%);

@@ -7,8 +7,10 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.h1`
-  color: red;
+  ${({ theme }) => css`
   margin: 15px 0px;
+  color: ${theme.colors.error.primary}
+  `}
 `;
 
 export const Container = styled.div`
@@ -17,23 +19,26 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 400px;
-  margin: 10px;
+  margin-bottom: 15px;
 `;
 
 export const Image = styled.img`
   ${({ loading }) => css`
     opacity: 0;
+    height: 100%;
     transition: opacity 200ms ease-in-out;
-    ${loading && css`
-    opacity: 1;
+
+    ${!loading && css`
+      opacity: 1;
     `}
   `}
 `;
 
-export const Loading = styled.div`
+export const LoadingText = styled.p`
   ${({ loading }) => css`
     position: absolute;
     opacity: 0;
+
     ${loading && css`
       opacity: 1;
     `}
@@ -45,7 +50,10 @@ export const Button = styled.button`
   background-color: royalblue;
   color: white;
   padding: 10px;
-  border-radius: 100px;
+  border-radius: 10px;
   cursor: pointer;
 
+  &:disabled {
+    background-color: gray;
+  }
 `;

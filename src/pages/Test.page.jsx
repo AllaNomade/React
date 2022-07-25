@@ -1,6 +1,6 @@
 import { useForm, Controller } from 'react-hook-form';
-import { Link } from 'react-router-dom';
-import { Header } from '../components';
+import { Link, useNavigate } from 'react-router-dom';
+import { Header, RandomDog } from '../components';
 import DefaultInput from '../components/DefaultInput';
 
 const TestPage = () => {
@@ -10,6 +10,12 @@ const TestPage = () => {
       password: '9999',
     },
   });
+
+  const navigate = useNavigate();
+
+  const handleOnclick = () => {
+    navigate('/login');
+  };
 
   const onSubmit = (data) => {
     console.log(data);
@@ -42,9 +48,10 @@ const TestPage = () => {
             );
           }}
         />
-        <button type="submit">entrar</button>
+        <button type="submit" onClick={handleOnclick}>entrar</button>
       </form>
       <Link to="/login">Já possui conta? Faça o Login!</Link>
+      <RandomDog />
     </div>
 
   );

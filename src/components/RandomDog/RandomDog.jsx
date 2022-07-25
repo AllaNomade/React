@@ -14,10 +14,13 @@ const RandomDog = () => {
     const data = await response.json();
     const { message } = data;
     setCurrentImage(message);
-    setLoading(false);
   };
 
   const handleError = () => {
+    setLoading(false);
+  };
+
+  const handleOnLoad = () => {
     setLoading(false);
   };
 
@@ -29,6 +32,9 @@ const RandomDog = () => {
   };
 
   const handleClick = () => {
+    if (loading) {
+      return;
+    }
     requestDog();
   };
 
@@ -38,12 +44,12 @@ const RandomDog = () => {
 
   return (
     <Style.Wrapper>
-      <Style.Title>RandomDog</Style.Title>
+      <Style.Title>Random Dog</Style.Title>
       <Style.Container>
-        <Style.Image alt="dog" src={currentImage} Loading={loading} />
-        <Style.Loading loading={loading}>Loading...</Style.Loading>
+        <Style.Image alt="dog" src={currentImage} loading={loading} onLoad={handleOnLoad} />
+        <Style.LoadingText loading={loading}>Loading...</Style.LoadingText>
       </Style.Container>
-      <Style.Button type="button" onClick={handleClick}>Load</Style.Button>
+      <Style.Button type="button" onClick={handleClick} disabled={loading}>Load</Style.Button>
     </Style.Wrapper>
   );
 };
